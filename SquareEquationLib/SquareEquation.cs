@@ -30,5 +30,6 @@ public class SquareEquation
             Roots_Of_The_Equation[1] = c / Roots_Of_The_Equation[0];
         }
         return Roots_Of_The_Equation;
+        
     }
 }
