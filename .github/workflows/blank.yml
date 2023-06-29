@@ -1,0 +1,6 @@
+on:
+  push:
+    branches:
+     - "square_equation"
+    paths:
+     - ".github/workflows/square-equation.yml"
