@@ -41,4 +41,5 @@ public class UnitTest1
     {
         Assert.Throws<System.ArgumentException>(() => SquareEquation.Solve(a, b, c));
     }
+    
 }
