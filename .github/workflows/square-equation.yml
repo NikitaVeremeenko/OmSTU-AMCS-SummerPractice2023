@@ -2,7 +2,7 @@ name: square equation test
 
 on:
   push:
-    branches: ["square_equation"]
+    branches: ["xUnit"]
 
 jobs:
   build:
@@ -24,4 +24,4 @@ jobs:
 
       - name: Unit test and coverage
         run: dotnet test /p:CollectCoverage=true /p:ThresholdType=line /p:Threshold=100
-        
+
