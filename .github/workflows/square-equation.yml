@@ -21,8 +21,10 @@ jobs:
 
       - name: Build
         run: dotnet build SquareEquationLib --no-restore /p:ContinuousIntegrationBuild=true
+        
+      - run: cd SquareEquationLib.Tests
 
       - name: Unit test and coverage
-        run: cd SquareEquationLib.Tests
+      
         run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
 
