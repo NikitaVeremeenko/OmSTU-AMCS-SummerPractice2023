@@ -2,7 +2,7 @@ name: square equation test
 
 on:
   push:
-    branches: ["xUnit"]
+    branches: ["Task_6"]
 
 jobs:
   build:
@@ -14,15 +14,13 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v2
         with:
-          dotnet-version: 7.0.x
+          dotnet-version: 7.0.x 
 
-      - name: Restore dependencies
-        run: dotnet restore SquareEquationLib
+      - name: Restore dependencies 
+        run: dotnet restore SquareEquationLib/
 
       - name: Build
-        run: dotnet build SquareEquationLib --no-restore /p:ContinuousIntegrationBuild=true
+        run: dotnet build SquareEquationLib/ --no-restore /p:ContinuousIntegrationBuild=true
 
-      - name: Unit test and coverage
-      
-        run: cd SquareEquationLib.Tests && dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
-
+      - name: Unittest and coverage
+        run: dotnet test BDD /p:CollectCoverage=true /p:CoverletOutput=TestResults /p:CoverletOutputFormat=cobertura
