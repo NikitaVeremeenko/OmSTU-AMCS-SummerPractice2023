@@ -31,7 +31,7 @@ jobs:
           dotnet-version: 7.0.x
 
       - name: Restore dependencies
-        run: dotnet restore SpaceBattle/
+        run: dotnet restore spacebattle/
 
       - name: Build
         run: dotnet build /p:ContinuousIntegrationBuild=true
