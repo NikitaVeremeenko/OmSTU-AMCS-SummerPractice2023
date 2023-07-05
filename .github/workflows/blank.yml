@@ -34,7 +34,7 @@ jobs:
         run: dotnet restore SpaceBattle/
 
       - name: Build
-        run: dotnet build SpaceBattle/ --no-restore /p:ContinuousIntegrationBuild=true
+        run: dotnet build /p:ContinuousIntegrationBuild=true
 
       - name: Unittest and coverage
         run: cd spacebattletests && dotnet test /p:CollectCoverage=true /p:CoverletOutput=TestResults /p:CoverletOutputFormat=cobertura
